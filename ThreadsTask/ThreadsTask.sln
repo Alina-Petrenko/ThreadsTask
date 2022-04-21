@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingMutex", "UsingMutex", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutexTask", "MutexTask\MutexTask.csproj", "{F535E19F-1F12-4962-AEE4-52C8E65AED8D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingSemaphoreSlim", "UsingSemaphoreSlim", "{62986BBD-43EF-4440-8A08-C27D582D7CF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemaphoreSlimTask", "SemaphoreSlimTask\SemaphoreSlimTask.csproj", "{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{F535E19F-1F12-4962-AEE4-52C8E65AED8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F535E19F-1F12-4962-AEE4-52C8E65AED8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F535E19F-1F12-4962-AEE4-52C8E65AED8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{2B775D96-3E31-4329-B1A0-00889F4E8ED3} = {8A08B2D1-55C5-4B02-8191-565E4D054641}
 		{D5FAE896-7A95-49D7-AF08-FC47D2B88E79} = {0318D65B-00A5-4539-B906-DF5DED0CCE06}
 		{F535E19F-1F12-4962-AEE4-52C8E65AED8D} = {A5388926-5905-4F0B-B0AB-DFF1D7058B85}
+		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B} = {62986BBD-43EF-4440-8A08-C27D582D7CF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA37D260-C71B-43AB-9383-16388E501257}
