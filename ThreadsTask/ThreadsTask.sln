@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingSemaphoreSlim", "Using
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemaphoreSlimTask", "SemaphoreSlimTask\SemaphoreSlimTask.csproj", "{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingManualResetEvent", "UsingManualResetEvent", "{F59D5854-A4CA-4137-B06A-58F09D21075E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualResetEventTask", "ManualResetEventTask\ManualResetEventTask.csproj", "{48C77319-5F2F-4248-8C40-9FD576045079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C77319-5F2F-4248-8C40-9FD576045079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C77319-5F2F-4248-8C40-9FD576045079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C77319-5F2F-4248-8C40-9FD576045079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C77319-5F2F-4248-8C40-9FD576045079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{D5FAE896-7A95-49D7-AF08-FC47D2B88E79} = {0318D65B-00A5-4539-B906-DF5DED0CCE06}
 		{F535E19F-1F12-4962-AEE4-52C8E65AED8D} = {A5388926-5905-4F0B-B0AB-DFF1D7058B85}
 		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B} = {62986BBD-43EF-4440-8A08-C27D582D7CF4}
+		{48C77319-5F2F-4248-8C40-9FD576045079} = {F59D5854-A4CA-4137-B06A-58F09D21075E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA37D260-C71B-43AB-9383-16388E501257}
