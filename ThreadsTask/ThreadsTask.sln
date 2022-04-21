@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingCountdownEvent", "Usin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountdownEventTask", "CountdownEventTask\CountdownEventTask.csproj", "{04939F78-8B56-4782-9607-E25F34627EC6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingCancellationTokenSource", "UsingCancellationTokenSource", "{2893393D-7119-4C85-9CB9-EF52D54CB7D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationTokenSourceTask", "CancellationTokenSourceTask\CancellationTokenSourceTask.csproj", "{096C7BDA-CA45-41D1-B78C-D84269DE7AC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{04939F78-8B56-4782-9607-E25F34627EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04939F78-8B56-4782-9607-E25F34627EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04939F78-8B56-4782-9607-E25F34627EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096C7BDA-CA45-41D1-B78C-D84269DE7AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096C7BDA-CA45-41D1-B78C-D84269DE7AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096C7BDA-CA45-41D1-B78C-D84269DE7AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096C7BDA-CA45-41D1-B78C-D84269DE7AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{38702AC8-FBB0-48CB-A453-B0707C4E5B1B} = {62986BBD-43EF-4440-8A08-C27D582D7CF4}
 		{48C77319-5F2F-4248-8C40-9FD576045079} = {F59D5854-A4CA-4137-B06A-58F09D21075E}
 		{04939F78-8B56-4782-9607-E25F34627EC6} = {EFDA410F-1DFC-4874-A8B5-4328E3F63A76}
+		{096C7BDA-CA45-41D1-B78C-D84269DE7AC0} = {2893393D-7119-4C85-9CB9-EF52D54CB7D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA37D260-C71B-43AB-9383-16388E501257}
