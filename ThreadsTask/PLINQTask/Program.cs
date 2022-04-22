@@ -19,7 +19,7 @@ namespace PLINQTask
         static void Main()
         {
             IEnumerable<int> firstList = Enumerable.Range(0, 50);
-            var secondList = new List<int>();
+            var secondList = new List<char>();
             var thirdList = new List<int>();
             IEnumerable<int> fourthList = Enumerable.Range(0,100);
             var rand = new Random();
@@ -27,7 +27,7 @@ namespace PLINQTask
 
             for (var i = 0; i < 50; i++)
             {
-                secondList.Add(i*2);
+                secondList.Add((char)rand.Next('a', 'z'));
                 thirdList.Add(rand.Next(-25, 26));
             }
 
@@ -41,7 +41,7 @@ namespace PLINQTask
             OutputList(fourthList);
 
             var newFirstList = Enumerable.Range(0,50).AsParallel().AsOrdered().Where(x => x % 2 == 0);
-            var newSecondList = secondList.AsParallel().AsOrdered().Where(i => i < 20).Select(i => i * i);
+            var newSecondList = secondList.AsParallel().Select(i => i.ToString().ToUpper());
             var newThirdList = thirdList.AsParallel().Where(i => i < 0);
         
             Console.WriteLine("\nNew First list");
@@ -51,15 +51,11 @@ namespace PLINQTask
             Console.WriteLine("\nNew Third list");
             newThirdList.ForAll(i => Console.Write($"{i} "));
 
-            Thread.Sleep(1000);          
-            new Thread(() =>
-            {
-                cancellationTokenSource.Cancel();
-            }
-           ).Start();
+            Thread.Sleep(1000);     
+            new Thread(() => cancellationTokenSource.Cancel()).Start();
 
             try
-            {;
+            {
                 var newFourthList = fourthList.AsParallel().WithCancellation(cancellationTokenSource.Token).Select(i => i * i);
                 Console.WriteLine("\nNew Fourth list");
                 OutputList(newFourthList);
@@ -74,7 +70,7 @@ namespace PLINQTask
         /// Output <paramref name="list"/> to console
         /// </summary>
         /// <param name="list">List</param>
-        private static void OutputList (IEnumerable<int> list)
+        private static void OutputList<T> (IEnumerable<T> list)
         {
             foreach (var i in list)
             {
