@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace TaskParallelism
 {
+    /// <summary>
+    /// Represents working with 'Task'
+    /// </summary>
     public class Program
     {
         #region Private Methods
