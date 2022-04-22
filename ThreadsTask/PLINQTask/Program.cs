@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace PLINQTask
 {
@@ -17,14 +18,15 @@ namespace PLINQTask
         /// </summary>
         static void Main()
         {
-            var firstList = new List<int>();
+            IEnumerable<int> firstList = Enumerable.Range(0, 50);
             var secondList = new List<int>();
             var thirdList = new List<int>();
+            IEnumerable<int> fourthList = Enumerable.Range(0,100);
             var rand = new Random();
+            var cancellationTokenSource = new CancellationTokenSource();
 
             for (var i = 0; i < 50; i++)
             {
-                firstList.Add(i);
                 secondList.Add(i*2);
                 thirdList.Add(rand.Next(-25, 26));
             }
@@ -35,16 +37,37 @@ namespace PLINQTask
             OutputList(secondList);
             Console.WriteLine("\nThird list");
             OutputList(thirdList);
+            Console.WriteLine("\nFourth list");
+            OutputList(fourthList);
 
             var newFirstList = Enumerable.Range(0,50).AsParallel().AsOrdered().Where(x => x % 2 == 0);
             var newSecondList = secondList.AsParallel().AsOrdered().Where(i => i < 20).Select(i => i * i);
             var newThirdList = thirdList.AsParallel().Where(i => i < 0);
+        
             Console.WriteLine("\nNew First list");
             OutputList(newFirstList);
             Console.WriteLine("\nNew Second list");
             OutputList(newSecondList);
             Console.WriteLine("\nNew Third list");
             newThirdList.ForAll(i => Console.Write($"{i} "));
+
+            Thread.Sleep(1000);          
+            new Thread(() =>
+            {
+                cancellationTokenSource.Cancel();
+            }
+           ).Start();
+
+            try
+            {;
+                var newFourthList = fourthList.AsParallel().WithCancellation(cancellationTokenSource.Token).Select(i => i * i);
+                Console.WriteLine("\nNew Fourth list");
+                OutputList(newFourthList);
+            }
+            catch (OperationCanceledException)
+            {
+                Console.WriteLine("Operation for fourth list was Canceled");
+            }
         }
 
         /// <summary>
