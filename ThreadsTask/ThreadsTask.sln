@@ -47,6 +47,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingTaskParallelism", "Usi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskParallelism", "TaskParallelism\TaskParallelism.csproj", "{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingTaskExceptionHandling", "UsingTaskExceptionHandling", "{F6BE829F-FB17-4695-A5EF-16FEC777D68B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandlingTask", "ExceptionHandlingTask\ExceptionHandlingTask.csproj", "{9323897F-2B99-4D65-947C-5F845141C03C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +101,10 @@ Global
 		{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9323897F-2B99-4D65-947C-5F845141C03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9323897F-2B99-4D65-947C-5F845141C03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9323897F-2B99-4D65-947C-5F845141C03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9323897F-2B99-4D65-947C-5F845141C03C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +121,7 @@ Global
 		{FFF16D6E-E058-4949-98A8-AA47A1CA6DE2} = {48AD85CA-9CCA-4E85-B76A-5F2B46555AD6}
 		{6437BA68-D384-48D0-9EAA-0BBE92B61D29} = {0DB0BD36-A9FF-4C2D-8C05-E4523CAD4E8F}
 		{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA} = {E10BFDFB-6EF6-4F54-B873-807C7D351483}
+		{9323897F-2B99-4D65-947C-5F845141C03C} = {F6BE829F-FB17-4695-A5EF-16FEC777D68B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA37D260-C71B-43AB-9383-16388E501257}
