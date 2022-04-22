@@ -35,7 +35,7 @@ namespace MutexTask
 
         #endregion
 
-        #region Private Methods
+        #region Public Methods
 
         /// <summary>
         /// Divides a value in half
