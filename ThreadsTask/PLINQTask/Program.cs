@@ -21,7 +21,7 @@ namespace PLINQTask
             IEnumerable<int> firstList = Enumerable.Range(0, 50);
             var secondList = new List<char>();
             var thirdList = new List<int>();
-            IEnumerable<int> fourthList = Enumerable.Range(0,100);
+            IEnumerable<int> fourthList = ParallelEnumerable.Range(0,100);
             var rand = new Random();
             var cancellationTokenSource = new CancellationTokenSource();
 
