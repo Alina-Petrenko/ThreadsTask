@@ -16,7 +16,7 @@ namespace ExceptionHandlingTask
         private static void Main()
         {
             var rand = new Random();
-            Task<int> task = Task.Factory.StartNew(() => rand.Next(1,1001) / 0);
+            var task = Task.Factory.StartNew(() => rand.Next(1,1001) / 0);
             try
             {
                 Console.WriteLine($"Result: {task.Result}");

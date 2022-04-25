@@ -22,7 +22,7 @@ namespace MutexTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             Console.WriteLine("Using 'Mutex'");
             for (var i = 0; i < 5; i++)

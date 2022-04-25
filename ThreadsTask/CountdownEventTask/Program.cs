@@ -13,7 +13,7 @@ namespace CountdownEventTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             var countdownEvent = new CountdownEvent(9);
             for (var i = 1; i < 10; i++)

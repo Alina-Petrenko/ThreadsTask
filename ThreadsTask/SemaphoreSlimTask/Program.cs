@@ -13,7 +13,7 @@ namespace SemaphoreSlimTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             var semaphore = new SemaphoreSlim(2);
             for (var i = 1; i < 6; i++)

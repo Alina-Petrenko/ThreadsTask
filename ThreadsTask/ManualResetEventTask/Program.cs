@@ -8,7 +8,7 @@ namespace ManualResetEventTask
     /// </summary>
     public class Program
     {
-        #region Private Fields
+        #region Fields
 
         /// <summary>
         /// ManualResetEvent object with false value
@@ -22,7 +22,7 @@ namespace ManualResetEventTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             for (var i = 1; i < 5; i++)
             {

@@ -13,7 +13,7 @@ namespace Locking
         /// <summary>
         /// Locker
         /// </summary>
-        static readonly object _locker = new();
+        private static readonly object _locker = new();
 
         #endregion
 
@@ -22,7 +22,7 @@ namespace Locking
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             Console.WriteLine("Using 'lock'");
             for (var i = 0; i < 5; i++)

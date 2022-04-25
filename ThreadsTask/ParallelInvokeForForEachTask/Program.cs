@@ -14,7 +14,7 @@ namespace ParallelTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             var rand = new Random();
             var array = new int[50];

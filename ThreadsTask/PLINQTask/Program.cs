@@ -16,7 +16,7 @@ namespace PLINQTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             IEnumerable<int> firstList = Enumerable.Range(0, 50);
             var secondList = new List<char>();

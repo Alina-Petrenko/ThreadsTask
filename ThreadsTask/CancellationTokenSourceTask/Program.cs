@@ -14,12 +14,12 @@ namespace CancellationTokenSourceTask
         /// <summary>
         /// Entry point in project
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
             CancellationToken token = cancelTokenSource.Token;
 
-            Task task = new Task(() =>
+            var task = new Task(() =>
             {
                 for (var i = 1; i < 10; i++)
                 {
