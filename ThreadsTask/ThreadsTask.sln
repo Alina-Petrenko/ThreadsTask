@@ -37,19 +37,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundWorkerTask", "Bac
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingPLINQ", "UsingPLINQ", "{48AD85CA-9CCA-4E85-B76A-5F2B46555AD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLINQTask", "PLINQTask\PLINQTask.csproj", "{FFF16D6E-E058-4949-98A8-AA47A1CA6DE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLINQTask", "PLINQTask\PLINQTask.csproj", "{FFF16D6E-E058-4949-98A8-AA47A1CA6DE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingParallel", "UsingParallel", "{0DB0BD36-A9FF-4C2D-8C05-E4523CAD4E8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelTask", "ParallelInvokeForForEachTask\ParallelTask.csproj", "{6437BA68-D384-48D0-9EAA-0BBE92B61D29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelTask", "ParallelInvokeForForEachTask\ParallelTask.csproj", "{6437BA68-D384-48D0-9EAA-0BBE92B61D29}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingTaskParallelism", "UsingTaskParallelism", "{E10BFDFB-6EF6-4F54-B873-807C7D351483}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskParallelism", "TaskParallelism\TaskParallelism.csproj", "{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskParallelism", "TaskParallelism\TaskParallelism.csproj", "{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingTaskExceptionHandling", "UsingTaskExceptionHandling", "{F6BE829F-FB17-4695-A5EF-16FEC777D68B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandlingTask", "ExceptionHandlingTask\ExceptionHandlingTask.csproj", "{9323897F-2B99-4D65-947C-5F845141C03C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionHandlingTask", "ExceptionHandlingTask\ExceptionHandlingTask.csproj", "{9323897F-2B99-4D65-947C-5F845141C03C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsingConcurrentCollections", "UsingConcurrentCollections", "{7ABA909A-F26B-46E9-A9FE-7FB5D7FAEF75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentCollectionsTask", "ConcurrentCollectionsTask\ConcurrentCollectionsTask.csproj", "{0D401B9D-AAA3-4E67-BEA6-F94D15EB91FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,10 @@ Global
 		{9323897F-2B99-4D65-947C-5F845141C03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9323897F-2B99-4D65-947C-5F845141C03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9323897F-2B99-4D65-947C-5F845141C03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D401B9D-AAA3-4E67-BEA6-F94D15EB91FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D401B9D-AAA3-4E67-BEA6-F94D15EB91FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D401B9D-AAA3-4E67-BEA6-F94D15EB91FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D401B9D-AAA3-4E67-BEA6-F94D15EB91FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +130,7 @@ Global
 		{6437BA68-D384-48D0-9EAA-0BBE92B61D29} = {0DB0BD36-A9FF-4C2D-8C05-E4523CAD4E8F}
 		{4F10D5FC-84D4-47EB-BD4F-FD19ACEBD0AA} = {E10BFDFB-6EF6-4F54-B873-807C7D351483}
 		{9323897F-2B99-4D65-947C-5F845141C03C} = {F6BE829F-FB17-4695-A5EF-16FEC777D68B}
+		{0D401B9D-AAA3-4E67-BEA6-F94D15EB91FE} = {7ABA909A-F26B-46E9-A9FE-7FB5D7FAEF75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA37D260-C71B-43AB-9383-16388E501257}
