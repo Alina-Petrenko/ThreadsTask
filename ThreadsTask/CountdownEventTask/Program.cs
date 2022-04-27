@@ -24,6 +24,7 @@ namespace CountdownEventTask
                     countdownEvent.Signal();
                 }).Start(i);
             }
+            // TODO: try to use Reset() and AddCount() methods
             countdownEvent.Wait();
             Console.WriteLine("Done");
         }

@@ -22,12 +22,15 @@ namespace ConcurrentCollectionsTask
 
             for (var i = 1; i < count+1; i++)
             {
+                // TODO: better to use TryAdd
+                // TODO: https://makolyte.com/csharp-add-or-overwrite-a-value-in-concurrentdictionary/
                 dictionary[i] = i;
             }
 
             Console.WriteLine("Dictionary: ");
             foreach (var item in dictionary)
             {
+                // TODO: try to use another methods of concurrentdictionary
                 Console.Write($"{item} ");
             }
             Console.WriteLine("\nStack:");
@@ -64,7 +67,11 @@ namespace ConcurrentCollectionsTask
                         var success = stack.TryPop(out item);
                         if (success)
                         {
-                            Console.WriteLine($"Task {Task.CurrentId}, item {i} deleted");
+                            // TODO: wrong
+                            // Console.WriteLine($"Task {Task.CurrentId}, item {i} deleted");
+                            // TODO: right
+                            // TODO: check the results
+                            Console.WriteLine($"Task {Task.CurrentId}, item {item} deleted");
                         }
                     }
                     Console.WriteLine($"Task {Task.CurrentId} ended");
@@ -112,6 +119,15 @@ namespace ConcurrentCollectionsTask
             {
                 task.Wait();
             }
+            
+            // TODO: Example of return
+            /*
+             Task 6, item 0 dequeued
+             Task 6, item 1 dequeued
+             Task 6, item 0 dequeued
+             Task 6, item 2 dequeued
+             */
+            // TODO: How is it possible that we dequeued item 0 two times?
         }
 
         /// <summary>
@@ -136,6 +152,7 @@ namespace ConcurrentCollectionsTask
             {
                 while (!blockingCollection.IsCompleted)
                 {
+                    // TODO: better to use TryTake
                     var item = blockingCollection.Take();
                     Console.WriteLine($"Task {Task.CurrentId}, item {item} took");
                 }

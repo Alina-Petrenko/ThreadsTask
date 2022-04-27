@@ -49,7 +49,8 @@ namespace Locking
                 {
                     Console.WriteLine($"{Thread.CurrentThread.Name}: {value}");
                     value++;
-                    Thread.Sleep(100);
+                    // TODO: increased timeout to see that threads run in different order.
+                    Thread.Sleep(500);
                 }
             }
         }

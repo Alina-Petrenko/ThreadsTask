@@ -37,7 +37,7 @@ namespace AsyncAwaitTask
             {
                 Console.WriteLine($"Task started {Task.CurrentId}");
                 return value * value;
-                });
+            });
         }
 
         #endregion

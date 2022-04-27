@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 namespace CancellationTokenSourceTask
 {
     /// <summary>
+    /// TODO: change description
     /// Represents working with 'CountdownEvent'
     /// </summary>
     public class Program
@@ -35,6 +36,7 @@ namespace CancellationTokenSourceTask
             task.Start();
             Thread.Sleep(2000);
             cancelTokenSource.Cancel();
+            Console.WriteLine($"Task Status: {task.Status}");
             Thread.Sleep(1000);
             Console.WriteLine($"Task Status: {task.Status}");
             cancelTokenSource.Dispose();

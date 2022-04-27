@@ -19,6 +19,7 @@ namespace BackgroundWorkerTask
 
         #endregion
 
+        // TODO: public methods should be before private methods
         #region Private Methods
 
         /// <summary>
@@ -31,7 +32,13 @@ namespace BackgroundWorkerTask
             backgroundWorker.DoWork += Process;
             backgroundWorker.RunWorkerCompleted += CheckCompletedStatus;
             backgroundWorker.ProgressChanged += CheckProcessPercentage;
-            backgroundWorker.RunWorkerAsync();
+            // TODO: if worker already is run then we will receive
+            // TODO: System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+            // TODO: better to check IsBusy
+            if (!backgroundWorker.IsBusy)
+            {
+                backgroundWorker.RunWorkerAsync();
+            }
 
             Console.WriteLine("Enter to cancel");
             Console.ReadLine();

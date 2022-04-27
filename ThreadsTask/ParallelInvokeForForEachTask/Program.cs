@@ -21,9 +21,9 @@ namespace ParallelTask
             Parallel.For(0, array.Length, i => array[i] = rand.Next(0, 1001));
             Parallel.ForEach(array, value => Console.Write($"{value} "));
             Parallel.Invoke(
-            () =>
-                Console.WriteLine($"\nTask {Task.CurrentId} is processed."),
-            () => Print(),
+            () => Console.WriteLine($"\nTask {Task.CurrentId} is processed."),
+            // TODO: you can send just name of the method if there is no input parameters.
+            Print,
             () => Find(array)
             );
 

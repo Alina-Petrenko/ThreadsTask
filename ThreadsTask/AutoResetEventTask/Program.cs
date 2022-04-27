@@ -32,6 +32,8 @@ namespace AutoResetEventTask
             for (var i = 1; i < 6; i++)
             {
                 var myThread = new Thread(Process);
+                // TODO: better to call WaitOne() here to take a look that main thread is waiting for created thread.
+                // TODO: Example: http://dotnetpattern.com/threading-autoresetevent
                 myThread.Name = $"Thread {i}";
                 myThread.Start();
             }

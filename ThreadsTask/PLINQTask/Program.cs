@@ -40,14 +40,21 @@ namespace PLINQTask
             Console.WriteLine("\nFourth list");
             OutputList(fourthList);
 
+            // TODO: here should be firstList instead of Enumerable.Range(0,50) ?
             var newFirstList = Enumerable.Range(0,50).AsParallel().AsOrdered().Where(x => x % 2 == 0);
+            // TODO: Will be good to see difference in time with and without AsParallel()
+            // TODO: Better to use AsOrdered() to save order of items during parallel operations.
+            // TODO: Compare result with and without AsOrdered()
             var newSecondList = secondList.AsParallel().Select(i => i.ToString().ToUpper());
+            var newSecondList2 = secondList.AsParallel().AsOrdered().Select(i => i.ToString().ToUpper());
             var newThirdList = thirdList.AsParallel().Where(i => i < 0);
         
             Console.WriteLine("\nNew First list");
             OutputList(newFirstList);
             Console.WriteLine("\nNew Second list");
             OutputList(newSecondList);
+            Console.WriteLine("\nNew Second list (version 2)");
+            OutputList(newSecondList2);
             Console.WriteLine("\nNew Third list");
             newThirdList.ForAll(i => Console.Write($"{i} "));
 
@@ -56,6 +63,7 @@ namespace PLINQTask
 
             try
             {
+                
                 var newFourthList = fourthList.AsParallel().WithCancellation(cancellationTokenSource.Token).Select(i => i * i);
                 Console.WriteLine("\nNew Fourth list");
                 OutputList(newFourthList);
